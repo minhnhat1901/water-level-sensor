@@ -4,11 +4,14 @@
 #define greenLED 2
 #define yellowLED 3
 #define redLED 4
-#define HIGH H
-#define LOW L
+//#define H HIGH
+//#define L LOW
 
 // Value for storing water level
 int val = 0;
+//const int greenLED = 2;
+//const int yellowLED = 3;
+//const int redLED 4;
 
 void setup() {
     // Set D7 as an OUTPUT
@@ -31,18 +34,18 @@ void loop() {
     Serial.print("Water level: ");
     Serial.println(level);
 
-    if (level < 341) {
-        digitalWrite(greenLED, H);
-        digitalWrite(yellowLED, L);
-        digitalWrite(greenLED, L);
-    } else if (level < 682) {
-        digitalWrite(greenLED, L);
-        digitalWrite(yellowLED, H);
-        digitalWrite(redLED, L);
+    if (level < 48) {
+        digitalWrite(greenLED, HIGH);
+        digitalWrite(yellowLED, LOW);
+        digitalWrite(redLED, LOW);
+    } else if (level < 96) {
+        digitalWrite(greenLED, LOW);
+        digitalWrite(yellowLED, HIGH);
+        digitalWrite(redLED, LOW);
     } else {
-        digitalWrite(greenLED, L);
-        digitalWrite(yellowLED, H);
-        digitalWrite(redLED, H);
+        digitalWrite(greenLED, LOW);
+        digitalWrite(yellowLED, LOW);
+        digitalWrite(redLED, HIGH);
     }
     delay(1000);
 }
