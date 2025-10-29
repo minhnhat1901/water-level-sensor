@@ -51,7 +51,7 @@ void loop() {
     Serial.println();
 }
 
-//This is a function used to get the reading
+// This is a function used to get the reading
 int readSensor() {
     digitalWrite(sensorPower, H);  // Turn the sensor ON
     delay(10);                        // wait 10 milliseconds
