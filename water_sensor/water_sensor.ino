@@ -42,7 +42,7 @@ void loop() {
         Serial.println("Safety mode");
         delay(200);
     } 
-    // Over the threshold then ssend the alert.
+    // Over the threshold then send the alert.
     else {
         digitalWrite(greenLED, L);
         digitalWrite(redLED, H);
