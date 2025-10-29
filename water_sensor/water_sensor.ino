@@ -8,7 +8,7 @@
 #define H HIGH
 #define L LOW
 
-// Value for storing water level
+// Variables
 int val = 0;
 const THRESH = 170;
 
