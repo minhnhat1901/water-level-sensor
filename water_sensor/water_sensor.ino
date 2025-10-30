@@ -10,7 +10,7 @@
 
 // Variables
 int val = 0;
-const THRESH = 170;
+const int THRESH = 170;
 
 void setup() {
     // Set D7 as an OUTPUT
